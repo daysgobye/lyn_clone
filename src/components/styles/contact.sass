@@ -1,0 +1,52 @@
+@import '../base.sass'
+.contact
+    display: flex
+    width: 100%
+    flex-direction: column
+    // background: teal
+    &__col
+        display: flex
+        justify-content: space-between
+        &__left
+            width: 40%
+            // background: pink
+        &__right
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            width: 55%
+            form
+                // background: tan
+                label
+                    margin-bottom: 25px
+                    display: flex
+                    flex-direction: column
+                    input
+                        padding: 10px
+                        border-radius: 2px
+                        border: 1px solid lightgray
+                    textarea
+                        border: none
+                        border-radius: 2px
+                        border: 1px solid light gray
+                        resize: none
+                .submit
+                    display: flex
+                    border: 2px solid gold
+                    width: 1em
+                    padding: 10px 40px
+                    justify-content: center
+                .name
+                    justify-content: space-between
+                    display: flex
+                    flex-direction: row
+                    input
+                        width: 48%
+    &__title
+        display: flex
+        justify-content: center
+        padding: 20vh
+        width: 100%
+        h2
+            font-size: 4vw

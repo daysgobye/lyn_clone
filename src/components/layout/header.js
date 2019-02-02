@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "gatsby"
-// import "./header.sass"
+import "./header.sass"
+import Content from '../Content/Content'
 class Headder extends Component {
   constructor(props) {
     super(props);
@@ -36,8 +37,9 @@ class Headder extends Component {
     this.setState({ navOpen: !currentstate });
   }
   render() {
-    return (
-      <headder>
+    return (<Content>
+      <div className="header">
+
         <h1>
           <Link to={"/"}>
 
@@ -73,7 +75,8 @@ class Headder extends Component {
             ))}
           </nav>
         </div>
-      </headder>
+      </div>
+    </Content>
     );
   }
 }

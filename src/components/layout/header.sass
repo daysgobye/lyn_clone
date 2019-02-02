@@ -1,4 +1,24 @@
-// header
-//     display: flex
-//     width: 100vw
-//     background: coral
+@import '../base.sass'
+
+.header
+    color: black
+    display: flex
+    align-items: center
+    padding: 40px 0
+    justify-content: space-between
+    width: 100vw
+    // background: coral
+    .desktop
+        display: flex
+        width: 40%
+        // background: lightseagreen
+        @include navsnap
+            display: none
+        nav
+            display: flex
+            width: 100%
+            justify-content: space-between
+    .mobile
+        display: none
+        @include navsnap
+            display: flex
