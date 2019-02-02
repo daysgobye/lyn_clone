@@ -22,13 +22,39 @@
         display: none
         @include navsnap
             display: flex
+        .dot
+            background: skyblue
+            display: flex
+            padding: 10px
+            &:hover
+                animation: spin-dot 2s infinite
+            &__one
+                border-radius: 100%
+                background: pink
+                width: 9px
+                height: 9px
+                margin: 2px
+            &__two
+                border-radius: 100%
+                background: green
+                width: 9px
+                height: 9px
+                margin: 2px
+            &__three
+                border-radius: 100%
+                background: blue
+                width: 9px
+                height: 9px
+                margin: 2px
         .nav
             display: flex
             flex-direction: column
             &__link
                 margin-left: 10px
                 margin-top: 20px
-        .nav__open
+    .nav__open
+        background: white
+        .nav
             animation: nav-open 2s forwards
             background: coral
             width: 100vw
@@ -39,10 +65,17 @@
             top: 0
             margin-top: 100px
             right: 0
-        .nav__closed
+    .nav__closed
+        background: red
+        .nav
             // animation: nav-close 2s  forwards
             display: none
             // visibility: hidden
+@keyframes spin-dot
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
 @keyframes nav-open
 
 

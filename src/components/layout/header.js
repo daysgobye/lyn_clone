@@ -60,11 +60,13 @@ class Headder extends Component {
           </nav>
         </div>
         {/* mobile nav */}
-        <div className="mobile">
-          <button onClick={() => this.toggleNav()}>
-            3 dots
-</button>
-          <nav className={`nav ${this.state.navOpen ? "nav__open" : "nav__closed"}`}>
+        <div className={`mobile ${this.state.navOpen ? "nav__open" : "nav__closed"}`}>
+          <button className="dot" onClick={() => this.toggleNav()}>
+            <div className="dot__one"></div>
+            <div className="dot__two"></div>
+            <div className="dot__three"></div>
+          </button>
+          <nav className={`nav`}>
             {this.state.navlinks.map((link, index) => (
               <div className="nav__link">
                 <Link to={link.link} key={index}>
