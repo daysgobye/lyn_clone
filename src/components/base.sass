@@ -108,7 +108,42 @@ button, input[type="submit"], input[type="reset"]
 
 
 
+.col__swap
+    @include navsnap
+      flex-direction: column
+.snap__full
+    @include navsnap
+    width: 100%
+.submit
+    animation: fillback .5s forwards
+    background: $accent
+    color: #c6c5b3
+    display: flex
+    border: 2px solid $accent
+    width: 1em
+    padding: 10px 40px
+    justify-content: center
+    background-position: right top
+    background: linear-gradient(to bottom, white 50%, $accent 50%)
+    background-size: 110% 200% 
+    &:hover
+        animation: emptyback .5s forwards
+@keyframes emptyback
+  0%
+    color: white
+    background-position: right top
 
+  100%
+    color: white
+    background-position: right bottom
+@keyframes fillback
+  0%
+    color: white
+    background-position: right bottom
+
+  100%
+    color: $accent
+    background-position: right top
 
 //removed medium google font and changed section--header to use normal 
 //if we want to make it bolder again we will need to add it back in

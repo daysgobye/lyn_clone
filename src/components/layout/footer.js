@@ -14,7 +14,7 @@ class Footer extends Component {
                 <div className="signup">
                     <form action="">
                         <input type="text" />
-                        <button>+</button>
+                        <button className="submit">+</button>
                     </form>
                 </div>
                 <div className="icons">

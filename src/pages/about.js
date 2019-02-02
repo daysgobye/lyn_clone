@@ -14,13 +14,13 @@ const About = () => (
       <div style={{ padding: "40vh" }}></div>
     </LaxHeader>
     <Content>
-      <div className="about">
-        <div className="about__left">
+      <div className="about col__swap">
+        <div className="about__left snap__full">
           <h2>
             We Were Smiths
 </h2>
         </div>
-        <div className="about__right">
+        <div className="about__right snap__full">
           <p>
             In my memoir, We Were Smiths: A Memoir, I reveal the consequences of leaving the Mormon Church as a descendant of Joseph Smith, the Mormon Church founder and prophet.  Why did my sister and I feel compelled to leave when so much was at stake? My family was considered Mormon royalty, but it was vulnerable to teenage rebellion, divorce, and substance abuse buried under the surface of our family’s perfect veneer.
 

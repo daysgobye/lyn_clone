@@ -22,3 +22,43 @@
         display: none
         @include navsnap
             display: flex
+        .nav
+            display: flex
+            flex-direction: column
+            &__link
+                margin-left: 10px
+                margin-top: 20px
+        .nav__open
+            animation: nav-open 2s forwards
+            background: coral
+            width: 100vw
+            height: calc(100vh - 100px)
+            position: absolute
+            display: flex
+            z-index: 1000
+            top: 0
+            margin-top: 100px
+            right: 0
+        .nav__closed
+            // animation: nav-close 2s  forwards
+            display: none
+            // visibility: hidden
+@keyframes nav-open
+
+
+    0%
+        transform: translateX(-100%)
+        opacity: 0
+    100%
+        transform: translateX(0%)
+        opacity: 1
+
+@keyframes nav-close
+
+    0%
+        transform: translateX(0%)
+        opacity: 1
+    100%
+        // visibility: hidden
+        transform: translateX(-100%)
+        opacity: 0

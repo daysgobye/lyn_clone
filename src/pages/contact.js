@@ -16,14 +16,14 @@ class contact extends Component {
                         <div className="contact__title">
                             <h2>contact</h2>
                         </div>
-                        <div className="contact__col">
+                        <div className="contact__col col__swap">
 
-                            <div className="contact__col__left">
+                            <div className="contact__col__left snap__full">
                                 <h3>get in touch</h3>
                                 <p>111-222-3333</p>
                                 <p>bigdaddy@youknowit.org</p>
                             </div>
-                            <div className="contact__col__right">
+                            <div className="contact__col__right snap__full">
                                 <Conform email="l33t.ppl@gmail.com">
                                     <label>
                                         Name *

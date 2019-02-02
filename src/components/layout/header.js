@@ -64,7 +64,7 @@ class Headder extends Component {
           <button onClick={() => this.toggleNav()}>
             3 dots
 </button>
-          <nav className="nav">
+          <nav className={`nav ${this.state.navOpen ? "nav__open" : "nav__closed"}`}>
             {this.state.navlinks.map((link, index) => (
               <div className="nav__link">
                 <Link to={link.link} key={index}>

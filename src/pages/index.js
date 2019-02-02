@@ -16,13 +16,13 @@ class Index extends React.Component {
 
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <Content>
-        <div className="home">
-          <div className="home__left">
+        <div className="home col__swap">
+          <div className="home__left snap__full">
             <div className="home__left__img">
               <img src="https://via.placeholder.com/500x700" alt="" />
             </div>
           </div>
-          <div className="home__right">
+          <div className="home__right snap__full">
             <h2>
               We Were Smiths
 </h2>
