@@ -52,29 +52,36 @@
                 height: 9px
                 margin: 2px
         .nav
-            background: red
+            background: pink
+            width: 100vw
             display: flex
+            align-items: flex-end
             flex-direction: column
             &__link
                 margin-left: 10px
                 margin-top: 20px
+    .nav__open, .nav__closed
+      position: relatve 
+      z-index: 1000
+      .nav 
+        transition: all 1.5s ease-in-out
+        width: 100vw
+        height: calc(100vh - 90px)
+        position: absolute
+        display: flex
+        margin-top: 90px
     .nav__open
         .nav
-            animation: nav-open 2s forwards
-            background: coral
-            width: 100vw
-            height: calc(100vh - 100px)
-            position: absolute
-            display: flex
-            z-index: 1000
-            top: 0
-            margin-top: 100px
+            transform: translateX(0)
+            background: green
             right: 0
+            width: 100vw
     .nav__closed
         .nav
-            animation: nav-close 2s  forwards
-            // display: none
-            // visibility: hidden
+            transform: translateX(-200vw)
+            background: red
+            width: 100vw
+            right: 0
     a
         &:hover
             color: $light-grey
