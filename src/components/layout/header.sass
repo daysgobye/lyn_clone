@@ -52,6 +52,7 @@
                 height: 9px
                 margin: 2px
         .nav
+            background: red
             display: flex
             flex-direction: column
             &__link
@@ -71,8 +72,8 @@
             right: 0
     .nav__closed
         .nav
-            // animation: nav-close 2s  forwards
-            display: none
+            animation: nav-close 2s  forwards
+            // display: none
             // visibility: hidden
     a
         &:hover
@@ -103,4 +104,4 @@
     100%
         // visibility: hidden
         transform: translateX(-100%)
-        opacity: 0
+        opacity: 1

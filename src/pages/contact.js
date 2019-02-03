@@ -9,6 +9,8 @@ class contact extends Component {
         this.state = {}
     }
     render() {
+        const data = this.props.data.contentfulSiteMisc
+
         return (
             <Layout>
                 <Content>
@@ -20,11 +22,10 @@ class contact extends Component {
 
                             <div className="contact__col__left snap__full">
                                 <h3>get in touch</h3>
-                                <p>111-222-3333</p>
-                                <p>bigdaddy@youknowit.org</p>
+                                <p>{data.contactEmail}</p>
                             </div>
                             <div className="contact__col__right snap__full">
-                                <Conform email="l33t.ppl@gmail.com">
+                                <Conform email={data.contactEmail}>
                                     <label>
                                         Name *
                                         <div className="name">
@@ -55,5 +56,13 @@ class contact extends Component {
         );
     }
 }
+export const query = graphql`
+  query {
+    contentfulSiteMisc{
+        contactEmail
+        
+      }
+  }
+`
 
 export default contact;
