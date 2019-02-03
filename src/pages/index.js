@@ -7,13 +7,17 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Content from '../components/Content/Content'
 import "../components/styles/home.sass"
+import Img from "gatsby-image"
+
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {}
   }
   render() {
+
     const data = this.props.data.contentfulHome
+    console.log(data);
     return (
       <Layout>
 
@@ -22,7 +26,7 @@ class Index extends React.Component {
           <div className="home col__swap">
             <div className="home__left snap__full">
               <div className="home__left__img">
-                <img src={data.mainImage.file.url} alt="" />
+                <Img fluid={data.mainImage.fluid} alt="" />
               </div>
             </div>
             <div className="home__right snap__full">
@@ -48,12 +52,10 @@ export const query = graphql`
         }
       }
       mainImage{
-        file{
-          url
-        }
-        fluid{
-          aspectRatio
-        }
+        
+      fluid(maxWidth: 400) {
+            ...GatsbyContentfulFluid_noBase64
+          }
       }
     }
   }
