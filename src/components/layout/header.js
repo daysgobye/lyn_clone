@@ -20,6 +20,10 @@ class Headder extends Component {
           link: "about"
         },
         {
+          title: "Excerpt",
+          link: "excerpt"
+        },
+        {
           title: "Photo gallery",
           link: "photo-gallery"
         },

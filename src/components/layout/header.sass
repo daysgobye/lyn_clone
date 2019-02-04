@@ -10,20 +10,25 @@
     color: black
     display: flex
     align-items: center
-    padding: 55px 0
+    padding: 40px 0
     justify-content: space-between
     width: 100vw
     @include navsnap
         padding: 10px 0
     h1
+        // background: red
         a
-            font-size: .8em
+            // font-size: .8em
             font-family: $mainfont
     .desktop
         font-size: .9em
         display: flex
-        width: 27%
+        width: 32%
         // background: lightseagreen
+        @include edgesnap
+            width: 50%
+        @include tablet
+            width: 65%
         @include navsnap
             display: none
         nav
@@ -84,7 +89,7 @@
         height: calc(100vh - 50px)
         position: absolute
         display: flex
-        margin-top: 50px
+        margin-top: 45px
     .nav__open
         .nav
             transform: translateX(0)
