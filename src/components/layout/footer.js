@@ -14,7 +14,7 @@ class Footer extends Component {
         const data = this.props.data
         return (
             <footer className="footer">
-                <h3>stay in Touch</h3>
+                <h3>Stay in Touch</h3>
                 <p>Subscribe to my mailing list to receive updates and promotional offers.</p>
                 <div className="signup">
                     <form action="">
@@ -23,10 +23,10 @@ class Footer extends Component {
                     </form>
                 </div>
                 <div className="icons">
-                    <a href={`"mailto:${data.contatEmail}`}> <img src={email} width="20" height="20" alt="email icon" /></a>
-                    <a href={data.faceBookLink}> <img src={facbook} width="20" height="20" alt="facebook logo" /></a>
-                    <a href={data.twitterLink}> <img src={twitter} width="20" height="20" alt="twitter logo" /></a>
-                    <a href={data.instagramkLink}> <img src={instagram} width="20" height="20" alt="instagram logo" /></a>
+                    <a href={`"mailto:${data.contatEmail}`}> <img src={email} width="17" height="17" alt="email icon" /></a>
+                    <a href={data.faceBookLink}> <img src={facbook} width="17" height="17" alt="facebook logo" /></a>
+                    <a href={data.twitterLink}> <img src={twitter} width="17" height="17" alt="twitter logo" /></a>
+                    <a href={data.instagramkLink}> <img src={instagram} width="17" height="17" alt="instagram logo" /></a>
                 </div>
 
                 © {new Date().getFullYear()}, Built by

@@ -4,7 +4,7 @@
   padding: 0
   margin: 0 
   box-sizing: border-box
-  font-family: 'Rubik', sans-serif !important
+  font-family: 'Rubik', sans-serif 
   font-weight: 400
   a, a:visited 
     text-decoration: none
@@ -37,7 +37,7 @@ html
       font-size: 2.05em
       padding-bottom: 0.7em
   h3 
-    font-size: 1.36em
+    font-size: 1.76em
   h4 
     font-size: 1.225em
     letter-spacing: .025em
@@ -61,7 +61,7 @@ html
     display: flex
     align-self: center
     // align-content: center
-    width: 1120px
+    width: 1300px
     height: 100%
     padding: 0px 40px
     // width: 100%
@@ -82,7 +82,7 @@ html
 
 
 h1, h2, h3, h4, h5, h6 
-    font-faily: 'Fira Sans', sans-serif
+    // font-faily: 'Fira Sans', sans-serif
     margin: 0
     padding: 0
 
@@ -109,7 +109,9 @@ button, input[type="submit"], input[type="reset"]
 
 .sethtml
   p,h1,h2,h3,h4,h5,h6,a,img
-    margin-bottom: 1rem
+    margin-bottom: 2.4rem
+  p
+    font-family: $mainfont
 .col__swap
     @include navsnap
       flex-direction: column
@@ -127,7 +129,7 @@ button, input[type="submit"], input[type="reset"]
     padding: 10px 40px
     justify-content: center
     background-position: right top
-    background: linear-gradient(to bottom, white 50%, $accent 50%)
+    background: linear-gradient(to bottom, $main-background 50%, $accent 50%)
     background-size: 110% 200% 
     &:hover
         animation: emptyback .5s forwards

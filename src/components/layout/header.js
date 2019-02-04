@@ -37,48 +37,51 @@ class Headder extends Component {
     this.setState({ navOpen: !currentstate });
   }
   render() {
-    return (<Content>
-      <div className="header">
+    return (
+      <div className="header__wrapper">
+        <Content>
+          <div className="header">
 
-        <h1>
-          <Link to={"/"}>
+            <h1>
+              <Link to={"/"}>
 
-            {this.props.siteTitle}
-          </Link>
-        </h1>
-        {/* desktop nav */}
-        <div className="desktop">
-          <nav className="nav">
-            {this.state.navlinks.map((link, index) => (
-              <div className="nav__link">
-                <Link to={link.link} key={index}>
-                  {link.title}
-                </Link>
-              </div>
+                {this.props.siteTitle}
+              </Link>
+            </h1>
+            {/* desktop nav */}
+            <div className="desktop">
+              <nav className="nav">
+                {this.state.navlinks.map((link, index) => (
+                  <div className="nav__link">
+                    <Link to={link.link} key={index}>
+                      {link.title}
+                    </Link>
+                  </div>
 
-            ))}
-          </nav>
-        </div>
-        {/* mobile nav */}
-        <div className={`mobile ${this.state.navOpen ? "nav__open" : "nav__closed"}`}>
-          <button className="dot" onClick={() => this.toggleNav()}>
-            <div className="dot__one"></div>
-            <div className="dot__two"></div>
-            <div className="dot__three"></div>
-          </button>
-          <nav className={`nav`}>
-            {this.state.navlinks.map((link, index) => (
-              <div className="nav__link">
-                <Link to={link.link} key={index}>
-                  {link.title}
-                </Link>
-              </div>
+                ))}
+              </nav>
+            </div>
+            {/* mobile nav */}
+            <div className={`mobile ${this.state.navOpen ? "nav__open" : "nav__closed"}`}>
+              <button className="dot" onClick={() => this.toggleNav()}>
+                <div className="dot__one"></div>
+                <div className="dot__two"></div>
+                <div className="dot__three"></div>
+              </button>
+              <nav className={`nav`}>
+                {this.state.navlinks.map((link, index) => (
+                  <div className="nav__link">
+                    <Link to={link.link} key={index}>
+                      {link.title}
+                    </Link>
+                  </div>
 
-            ))}
-          </nav>
-        </div>
+                ))}
+              </nav>
+            </div>
+          </div>
+        </Content>
       </div>
-    </Content>
     );
   }
 }

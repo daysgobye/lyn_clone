@@ -1,16 +1,33 @@
 @import '../base.sass'
+.header__wrapper
+    @include navsnap
+        position: sticky
+        top: 0
+        z-index: 10000
+        background: $main-background
 
 .header
     color: black
     display: flex
     align-items: center
-    padding: 40px 0
+    padding: 55px 0
     justify-content: space-between
     width: 100vw
-    // background: coral
+    @include navsnap
+        padding: 10px 0
+        position: sticky
+        bottom: 0
+        z-index: 10000
+    h1
+        a
+            font-size: .8em
+            font-family: $mainfont
+            @include navsnap
+            padding-left: 0
     .desktop
+        font-size: .9em
         display: flex
-        width: 40%
+        width: 27%
         // background: lightseagreen
         @include navsnap
             display: none
@@ -33,29 +50,29 @@
                 transform: translateX(300%)
                 border-radius: 100%
                 background: black
-                width: 9px
-                height: 9px
+                width: 5px
+                height: 5px
                 margin: 2px
             &__two
                 animation: dot-in .8s forwards
                 border-radius: 100%
                 transform: translateX(150%)
                 background: black
-                width: 9px
-                height: 9px
+                width: 5px
+                height: 5px
                 margin: 2px
             &__three
                 animation: dot-in .8s forwards
                 border-radius: 100%
                 background: black
-                width: 9px
-                height: 9px
+                width: 5px
+                height: 5px
                 margin: 2px
         .nav
             background: pink
             width: 100vw
             display: flex
-            align-items: flex-end
+            align-items: flex-start
             flex-direction: column
             &__link
                 margin-left: 10px
@@ -66,10 +83,10 @@
       .nav 
         transition: all 1.5s ease-in-out
         width: 100vw
-        height: calc(100vh - 90px)
+        height: calc(100vh - 50px)
         position: absolute
         display: flex
-        margin-top: 90px
+        margin-top: 50px
     .nav__open
         .nav
             transform: translateX(0)

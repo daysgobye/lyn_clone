@@ -16,7 +16,7 @@ class contact extends Component {
                 <Content>
                     <div className="contact">
                         <div className="contact__title">
-                            <h2>contact</h2>
+                            <h2>Contact</h2>
                         </div>
                         <div className="contact__col col__swap">
 
