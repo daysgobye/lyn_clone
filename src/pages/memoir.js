@@ -15,7 +15,7 @@ class memoir extends Component {
         return (
             <Layout>
                 <LaxHeader bgimg={data.heroImage.file.url}>
-                    <div className="sethtml mem__herotext" style={{ padding: "40vh 0" }} dangerouslySetInnerHTML={{ __html: data.heroText.childContentfulRichText.html }} ></div>
+                    <div className="sethtml mem__herotext" style={{ height: "85vh" }} dangerouslySetInnerHTML={{ __html: data.heroText.childContentfulRichText.html }} ></div>
                 </LaxHeader>
                 <Content>
                     <div className="mem">

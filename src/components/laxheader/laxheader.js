@@ -13,7 +13,7 @@ class LaxHeader extends Component {
                     blur={0}
                     bgImage={this.props.bgimg}
                     bgImageAlt="the cat"
-                    strength={250}
+                    strength={300}
                 >
 
                     <Content>

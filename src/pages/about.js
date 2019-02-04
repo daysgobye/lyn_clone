@@ -18,7 +18,7 @@ class About extends React.Component {
     const data = this.props.data.contentfulAbout
     return (<Layout>
       <LaxHeader bgimg={data.heroImage.file.url}>
-        <div style={{ padding: "40vh" }}></div>
+        <div style={{ height: "85vh" }}></div>
       </LaxHeader>
       <Content>
         <div className="about col__swap">

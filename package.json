@@ -23,7 +23,9 @@
     "react-helmet": "^5.2.0",
     "react-parallax": "^2.1.0",
     "typeface-playfair-display": "0.0.54",
-    "typeface-sumana": "0.0.54"
+    "typeface-scheherazade": "0.0.65",
+    "typeface-sumana": "0.0.54",
+    "typeface-suranna": "0.0.54"
   },
   "keywords": [
     "gatsby"
