@@ -20,13 +20,13 @@ class photoGallery extends Component {
         <Content>
           <div className="photogallery">
             <div className="photogallery__container">
-              <h1>photo-gallery sick page</h1>
+              <h2>Photo Gallery</h2>
               <div className="photogallery__container__grid">
                 {data.contentfulPhotoGallery.mainImageGallery.map(img => (
-                  <Img fluid={img.image.fluid} />
-                  // <h3 className="photogallery__container__grid__item">
-                  //   this is an image
-                  // </h3>
+                  <div className="photogallery__container__grid__item">
+                    <Img fluid={img.image.fluid} />
+                    <p>{img.image.description}</p>
+                  </div>
                 ))}
               </div>
             </div>
