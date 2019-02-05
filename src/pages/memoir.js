@@ -10,7 +10,17 @@ import { graphql } from "gatsby";
 class memoir extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      loaded: false
+    };
+  }
+  componentDidMount() {
+    this.loadElements();
+  }
+  loadElements() {
+    setTimeout(() => {
+      this.setState({ loaded: true });
+    }, 50);
   }
   render() {
     const data = this.props.data.contentfulMemoir;
@@ -21,7 +31,9 @@ class memoir extends Component {
         <Layout>
           <LaxHeader bgimg={data.heroImage.file.url}>
             <div
-              className="sethtml mem__herotext"
+              className={`sethtml mem__herotext ${
+                this.state.loaded ? "loaded" : ""
+              }`}
               style={{ height: "85vh" }}
               dangerouslySetInnerHTML={{
                 __html: data.heroText.childContentfulRichText.html
