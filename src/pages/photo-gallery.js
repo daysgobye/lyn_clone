@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Layout from "../components/layout/layout";
 import Img from "gatsby-image";
-import { graphql } from "gatsby"
-
+import { graphql } from "gatsby";
+import SEO from "../components/seo";
 
 //components
 import Content from "../components/Content/Content";
@@ -18,23 +18,26 @@ class photoGallery extends Component {
   render() {
     const { data } = this.props;
     return (
-      <Layout>
-        <Content>
-          <div className="photogallery">
-            <div className="photogallery__container">
-              <h2>Photo Gallery</h2>
-              <div className="photogallery__container__grid">
-                {data.contentfulPhotoGallery.mainImageGallery.map(img => (
-                  <div className="photogallery__container__grid__item">
-                    <Img fluid={img.image.fluid} />
-                    <p>{img.image.description}</p>
-                  </div>
-                ))}
+      <div>
+        <SEO />
+        <Layout>
+          <Content>
+            <div className="photogallery">
+              <div className="photogallery__container">
+                <h2>Photo Gallery</h2>
+                <div className="photogallery__container__grid">
+                  {data.contentfulPhotoGallery.mainImageGallery.map(img => (
+                    <div className="photogallery__container__grid__item">
+                      <Img fluid={img.image.fluid} />
+                      <p>{img.image.description}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </Content>
-      </Layout>
+          </Content>
+        </Layout>
+      </div>
     );
   }
 }
