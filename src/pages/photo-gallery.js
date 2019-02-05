@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Layout from "../components/layout/layout";
 import Img from "gatsby-image";
+import { graphql } from "gatsby"
+
 
 //components
 import Content from "../components/Content/Content";

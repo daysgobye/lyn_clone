@@ -4,6 +4,8 @@ import Content from '../components/Content/Content'
 import LaxHeader from '../components/laxheader/laxheader'
 import hero from "../images/test.png"
 import "../components/styles/memoir.sass"
+import { graphql } from "gatsby"
+
 class memoir extends Component {
     constructor(props) {
         super(props);

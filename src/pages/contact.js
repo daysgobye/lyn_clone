@@ -3,6 +3,8 @@ import Layout from "../components/layout/layout";
 import Content from "../components/Content/Content";
 import "../components/styles/contact.sass";
 import Conform from "../components/conform/conform";
+import { graphql } from "gatsby"
+
 class contact extends Component {
   constructor(props) {
     super(props);
