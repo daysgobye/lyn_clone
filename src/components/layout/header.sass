@@ -69,14 +69,14 @@
                 height: 5px
                 margin: 2px
         .nav
-            background: pink
+            background: $main-background
             width: 100vw
             display: flex
             align-items: flex-end
             flex-direction: column
             font-family: $subfont
             font-weight: $light
-
+            margin-right: 20px
             &__link
                 margin-left: 10px
                 margin-top: 20px
@@ -93,13 +93,11 @@
     .nav__open
         .nav
             transform: translateX(0)
-            background: green
             right: 0
             width: 100vw
     .nav__closed
         .nav
             transform: translateX(-200vw)
-            background: red
             width: 100vw
             right: 0
     a
