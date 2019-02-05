@@ -6,6 +6,12 @@
         width: 40%
         &__img
             width: 100%
+            // transform: translateX(-2vw)
+            opacity: 0 
+            transition: all .5s ease-in-out
+            &.loaded
+              // transform: translateX(0)
+              opacity: 1
             img
                 max-width: 100%
                 // padding: 20px 0px
@@ -21,6 +27,19 @@
             // margin-top: 100px
             font-family: $mainfont
             font-size: 2.9vw
+            transform: translateX(1.5vw)
+            opacity: 0
+            transition: all 1s ease-in-out
+            &.loaded 
+              transform: translateX(0)
+              opacity: 1
             @include navsnap
                 margin-top: 20px
                 font-size: 5.5vw
+        div 
+          transform: translateY(1.5vw)
+          opacity: 0
+          transition: all 1s ease-in-out
+          &.loaded 
+            transform: translateY(0)
+            opacity: 1

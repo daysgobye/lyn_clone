@@ -12,7 +12,20 @@ import Img from "gatsby-image";
 class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      loaded: false
+    };
+  }
+  componentDidMount() {
+    this.loadElements();
+  }
+  loadElements() {
+    setTimeout(() => {
+      this.setState({ loaded: true });
+    }, 50);
+    // setTimeout(() => {
+
+    // }, 250);
   }
   render() {
     const data = this.props.data.contentfulHome;
@@ -24,14 +37,20 @@ class Index extends React.Component {
           <Content>
             <div className="home col__swap">
               <div className="home__left snap__full">
-                <div className="home__left__img">
+                <div
+                  className={`home__left__img ${
+                    this.state.loaded ? "loaded" : ""
+                  }`}
+                >
                   <Img fluid={data.mainImage.fluid} alt="" />
                 </div>
               </div>
               <div className="home__right snap__full">
-                <h2>{data.titleBlock}</h2>
+                <h2 className={this.state.loaded ? "loaded" : ""}>
+                  {data.titleBlock}
+                </h2>
                 <div
-                  className="sethtml"
+                  className={`sethtml ${this.state.loaded ? "loaded" : ""}`}
                   dangerouslySetInnerHTML={{
                     __html: data.mainContentBlock.childContentfulRichText.html
                   }}
