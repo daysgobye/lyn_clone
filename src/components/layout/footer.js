@@ -31,7 +31,7 @@ class Footer extends Component {
 
                 © {new Date().getFullYear()}, Built by
             {` `}
-                <a href="https://www.purpleandbold"><img src={purp} width="50" height="35" alt="" /></a>
+                <a href="https://www.purpleandbold" aria-label="link to Purple and bolds web site"><img src={purp} width="50" height="35" alt="purple and bold logo" /></a>
             </footer>
         );
     }

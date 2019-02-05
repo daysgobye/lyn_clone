@@ -41,6 +41,7 @@ module.exports = {
     },
     `@contentful/gatsby-transformer-contentful-richtext`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-offline`
   ]
 };

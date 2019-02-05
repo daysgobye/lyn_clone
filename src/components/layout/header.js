@@ -67,7 +67,7 @@ class Headder extends Component {
             </div>
             {/* mobile nav */}
             <div className={`mobile ${this.state.navOpen ? "nav__open" : "nav__closed"}`}>
-              <button className="dot" onClick={() => this.toggleNav()}>
+              <button className="dot" aria-label="click to expand nav" onClick={() => this.toggleNav()}>
                 <div className="dot__one"></div>
                 <div className="dot__two"></div>
                 <div className="dot__three"></div>
