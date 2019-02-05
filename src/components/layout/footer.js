@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import purp from "../../images/purp.png"
 import "./footer.sass"
+import BuiltBy from "./builtby"
 import facbook from "../../images/facebook.svg"
 import instagram from "../../images/instagram.svg"
 import twitter from "../../images/twitter.svg"
@@ -28,10 +28,7 @@ class Footer extends Component {
                     <a href={data.twitterLink}> <img src={twitter} width="17" height="17" alt="twitter logo" /></a>
                     <a href={data.instagramkLink}> <img src={instagram} width="17" height="17" alt="instagram logo" /></a>
                 </div>
-
-                © {new Date().getFullYear()}, Built by
-            {` `}
-                <a href="https://www.purpleandbold" aria-label="link to Purple and bolds web site"><img src={purp} width="50" height="35" alt="purple and bold logo" /></a>
+                <BuiltBy />
             </footer>
         );
     }
