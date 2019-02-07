@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, page }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -25,7 +25,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                 },
                 {
                   property: `og:title`,
-                  content: data.site.siteMetadata.title
+                  content: `${data.site.siteMetadata.title} - ${page}`
                 },
                 {
                   property: `og:description`,
@@ -40,11 +40,11 @@ function SEO({ description, lang, meta, keywords, title }) {
                 //   property: `og:url`,
                 //   content: `https://www.purpleandbold.com`
                 // },
-                //we need a URL for this, www.lisasurl.com/lisasurl_og.png will be the path for OG image 1200x630 is the best image size
-                // {
-                //   property: `og:image`,
-                //   content: `https://www.purpleandbold.com/purpleandbold_og.png`
-                // },
+                // we need a URL for this, www.lisasurl.com/lisasurl_og.png will be the path for OG image 1200x630 is the best image size
+                {
+                  property: `og:image`,
+                  content: `https://www.purpleandbold.com/brener_og_banner_image`
+                },
                 {
                   name: `twitter:card`,
                   content: `summary`

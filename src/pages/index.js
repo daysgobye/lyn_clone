@@ -32,7 +32,7 @@ class Index extends React.Component {
     console.log(data);
     return (
       <div>
-        <SEO />
+        <SEO page="Home" />
         <Layout>
           <Content>
             <div className="home col__swap">

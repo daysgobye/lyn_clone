@@ -19,7 +19,7 @@ class About extends React.Component {
     const data = this.props.data.contentfulAbout;
     return (
       <div>
-        <SEO />
+        <SEO page="About" />
         <Layout>
           <LaxHeader bgimg={data.heroImage.file.url}>
             <div style={{ height: "85vh" }} />
