@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Lisa Brener`, //should probably be Lisa Brener | *name of book*
-    description: `Meta description goes here.`, //we need this from someone
+    title: `Beauty Laid Bare | Lisa Brener`,
+    description: `Lisa Brener, author of Beauty Laid Bare, About, Excerpts, Photos, and Memoir.`,
     author: `Lisa Brener`
   },
   plugins: [

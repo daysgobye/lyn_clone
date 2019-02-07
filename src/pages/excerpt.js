@@ -16,7 +16,7 @@ class Excerpt extends Component {
 
     return (
       <div>
-        <SEO />
+        <SEO page="Excerpts" />
         <Layout>
           <Content>
             <div className="exc">

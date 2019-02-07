@@ -16,7 +16,7 @@ class contact extends Component {
     const data = this.props.data.contentfulSiteMisc;
     return (
       <div>
-        <SEO />
+        <SEO page="Contact" />
         <Layout>
           <Content>
             <div className="contact">
@@ -28,7 +28,12 @@ class contact extends Component {
                   <h3>get in touch</h3>
                   <p>{data.contactEmail}</p>
                   <p>{data.contactPhonenumber}</p>
-                  <div className="contact__col__left__address" dangerouslySetInnerHTML={{ __html: data.address.childContentfulRichText.html }}></div>
+                  <div
+                    className="contact__col__left__address"
+                    dangerouslySetInnerHTML={{
+                      __html: data.address.childContentfulRichText.html
+                    }}
+                  />
                 </div>
                 <div className="contact__col__right snap__full">
                   <Conform email={data.contactEmail}>
@@ -76,13 +81,13 @@ export const query = graphql`
     contentfulSiteMisc {
       contactEmail
       contactPhonenumber
-      address{
-        childContentfulRichText{
+      address {
+        childContentfulRichText {
           html
         }
+      }
     }
   }
-}
 `;
 
 export default contact;

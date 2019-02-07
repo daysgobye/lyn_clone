@@ -19,7 +19,7 @@ class photoGallery extends Component {
     const { data } = this.props;
     return (
       <div>
-        <SEO />
+        <SEO page="Gallery" />
         <Layout>
           <Content>
             <div className="photogallery">

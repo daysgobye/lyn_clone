@@ -20,28 +20,29 @@ footer
             text-align: center
     .signup
         width: 40%
-        // background: red
+        // background: lightskyblue
         display: flex
         justify-content: center
         @include edgesnap
             width: 70%
         @include tablet
             width: 100%
-        form
-            width: 60%   
-            margin: 30px
-            display: flex
-            // background: blue
-            justify-content: space-between
-            @include navsnap
-                width: 80%
-            input
-                width: 73%
-                padding: 20px
-                border-radius: 2px
-                border: 1px solid lightgray
-            button
-                align-items: center
+        @import './mailchimp.sass'
+        // form
+        //     width: 60%   
+        //     margin: 30px
+        //     display: flex
+        //     // background: blue
+        //     justify-content: space-between
+        //     @include navsnap
+        //         width: 80%
+        //     input
+        //         width: 73%
+        //         padding: 20px
+        //         border-radius: 2px
+        //         border: 1px solid lightgray
+        //     button
+        //         align-items: center
     .icons
         img
             margin: 7px

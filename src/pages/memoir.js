@@ -27,7 +27,7 @@ class memoir extends Component {
 
     return (
       <div>
-        <SEO />
+        <SEO page="Memoir" />
         <Layout>
           <LaxHeader bgimg={data.heroImage.file.url}>
             <div
