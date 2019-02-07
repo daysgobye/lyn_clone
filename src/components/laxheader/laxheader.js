@@ -14,6 +14,7 @@ class LaxHeader extends Component {
                     bgImage={this.props.bgimg}
                     bgImageAlt="the cat"
                     strength={300}
+                    bgImageStyle={{ marginTop: "4vw" }}
                 >
 
                     <Content>
@@ -22,7 +23,7 @@ class LaxHeader extends Component {
                 </Parallax>
 
 
-            </div>
+            </div >
 
         );
     }
