@@ -27,13 +27,13 @@ class contact extends Component {
                 <div className="contact__col__left snap__full">
                   <h3>get in touch</h3>
                   <p>{data.contactEmail}</p>
-                  <p>{data.contactPhonenumber}</p>
                   <div
                     className="contact__col__left__address"
                     dangerouslySetInnerHTML={{
                       __html: data.address.childContentfulRichText.html
                     }}
-                  />
+                    />
+                    <p>{data.contactPhonenumber}</p>
                 </div>
                 <div className="contact__col__right snap__full">
                   <Conform email={data.contactEmail}>

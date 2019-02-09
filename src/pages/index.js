@@ -40,9 +40,10 @@ class Index extends React.Component {
                 <div
                   className={`home__left__img ${
                     this.state.loaded ? "loaded" : ""
-                  }`}
+                    }`}
                 >
                   <Img fluid={data.mainImage.fluid} alt="" />
+                  <h4>{data.photoCaption}</h4>
                 </div>
               </div>
               <div className="home__right snap__full">
@@ -73,6 +74,7 @@ export const query = graphql`
           html
         }
       }
+      photoCaption
       mainImage {
         fluid(maxWidth: 400) {
           ...GatsbyContentfulFluid_noBase64

@@ -29,7 +29,7 @@ class memoir extends Component {
       <div>
         <SEO page="Memoir" />
         <Layout>
-          <LaxHeader bgimg={""}>
+          <LaxHeader bgimg={data.heroImage.file.url}>
             <div
               className={`sethtml mem__herotext ${
                 this.state.loaded ? "loaded" : ""
