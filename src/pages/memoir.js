@@ -29,11 +29,11 @@ class memoir extends Component {
       <div>
         <SEO page="Memoir" />
         <Layout>
-          <LaxHeader bgimg={data.heroImage.file.url}>
+          <LaxHeader bgimg={""}>
             <div
               className={`sethtml mem__herotext ${
                 this.state.loaded ? "loaded" : ""
-              }`}
+                }`}
               style={{ height: "85vh" }}
               dangerouslySetInnerHTML={{
                 __html: data.heroText.childContentfulRichText.html

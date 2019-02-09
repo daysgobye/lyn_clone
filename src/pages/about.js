@@ -21,9 +21,11 @@ class About extends React.Component {
       <div>
         <SEO page="About" />
         <Layout>
-          <LaxHeader bgimg={data.heroImage.file.url}>
-            <div style={{ height: "85vh" }} />
-          </LaxHeader>
+          <div className="about__hero">
+            <LaxHeader bgimg={data.heroImage.file.url}>
+              <div style={{ height: "85vh" }} />
+            </LaxHeader>
+          </div>
           <Content>
             <div className="about col__swap">
               <div className="about__left snap__full">
