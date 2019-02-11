@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, keywords, title, page }) {
                 // we need a URL for this, www.lisasurl.com/lisasurl_og.png will be the path for OG image 1200x630 is the best image size
                 {
                   property: `og:image`,
-                  content: `https://www.purpleandbold.com/brener_og_banner_image`
+                  content: `https://www.author.purpleandbold.gq/brener_og_banner_image.jpg`
                 },
                 {
                   name: `twitter:card`,
