@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-import ogImage from "brener_og_banner_image.jpg";
+import ogImage from "./brener_og_banner_image.jpg";
 
 function SEO({ description, lang, meta, keywords, title, page, image }) {
   return (

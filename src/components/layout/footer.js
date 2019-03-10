@@ -26,7 +26,7 @@ class Footer extends Component {
           </form> */}
           <div id="mc_embed_signup">
             <form
-              action="#"
+              action="https://lisabrener.us20.list-manage.com/subscribe/post?u=41168e28eedca43c895480f3c&amp;id=6571b3ed67"
               method="post"
               id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form"
@@ -66,7 +66,7 @@ class Footer extends Component {
                 >
                   <input
                     type="text"
-                    name="b_7148d992c4429b31c494c4eba_a0bf264bc7"
+                    name="b_41168e28eedca43c895480f3c_6571b3ed67"
                     tabIndex={-1}
                     defaultValue
                   />
