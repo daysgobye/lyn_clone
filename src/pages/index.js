@@ -40,7 +40,7 @@ class Index extends React.Component {
                 <div
                   className={`home__left__img ${
                     this.state.loaded ? "loaded" : ""
-                    }`}
+                  }`}
                 >
                   <Img fluid={data.mainImage.fluid} alt="" />
                   <h4>{data.photoCaption}</h4>
