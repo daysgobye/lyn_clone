@@ -15,6 +15,17 @@ class photoGallery extends Component {
     super(props);
     this.state = {};
   }
+
+  imgClasses(title) {
+    if (title === "full width") {
+      return "photogallery__container__grid__item__full"
+    } else if (title === " half width") {
+      return "photogallery__container__grid__item__half"
+    } else {
+      return "stu"
+    }
+  }
+
   render() {
     const { data } = this.props;
     return (
@@ -27,7 +38,11 @@ class photoGallery extends Component {
                 <h2>Photo Gallery</h2>
                 <div className="photogallery__container__grid">
                   {data.contentfulPhotoGallery.mainImageGallery.map(img => (
-                    <div className="photogallery__container__grid__item">
+                    <div
+                      className={`photogallery__container__grid__item ${
+                        this.imgClasses(img.widths)
+                        }`}
+                    >
                       <Img fluid={img.image.fluid} />
                       <p>{img.image.description}</p>
                     </div>
@@ -46,6 +61,7 @@ export const query = graphql`
   query {
     contentfulPhotoGallery {
       mainImageGallery {
+        widths
         image {
           fluid(maxWidth: 600) {
             ...GatsbyContentfulFluid_noBase64
