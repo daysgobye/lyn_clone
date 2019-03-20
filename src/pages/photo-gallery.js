@@ -19,7 +19,7 @@ class photoGallery extends Component {
   imgClasses(title) {
     if (title === "full width") {
       return "photogallery__container__grid__item__full";
-    } else if (title === " half width") {
+    } else if (title === "half width") {
       return "photogallery__container__grid__item__half";
     } else {
       return "stu";
