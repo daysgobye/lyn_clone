@@ -3,12 +3,10 @@
 .photogallery
   display: flex
   width: 100%
-  // background: lightskyblue
   &__container
     display: flex
     flex-direction: column
     width: 100%
-    // background: lightgreen
     &__grid 
       display: grid 
       grid-gap: 20px
@@ -25,7 +23,8 @@
       width: 100%
       @include edgesnap 
         // grid-template-columns: repeat(auto-fill, minmax(400px,1fr))
-        grid-template-columns: repeat(auto-fill, minmax(min-content, max-content))
+        // grid-template-columns: repeat(auto-fill, minmax(min-content, max-content))
+        grid-template-columns: repeat(6, 1fr)
       @include navsnap 
         // grid-template-columns: repeat(auto-fill, minmax(100%,1fr))
         grid-template-columns: repeat(auto-fill, minmax(min-content, max-content))
@@ -45,10 +44,70 @@
           grid-column-end: 3  
         img
           filter: grayscale(100%)
-      &__item__full 
-        width: 100%
-      &__item__full
-        width: 100%
-        grid-column-start: 1
-        grid-column-end: 3
+        &__full
+          // width: 100%
+          // grid-column: 6 / span 6
+          // grid-column-start: 1
+          // grid-column-end: 6
+          grid-area: span 6 / span 6
+          // display: none 
+        &.half
+          // width: 100%
+          // grid-column-start: 1
+          // grid-column-end: 3
+          grid-area: span 3 / span 3
+          @include navsnap 
+            grid-area: span 6 / span 6
+        &.stu
+          // width: 3%
+          // grid-column-start: 1
+          // grid-column-end: 2
+          grid-area: span 2 / span 2
+          @include navsnap 
+            grid-area: span 6 / span 6
+        
 
+
+
+
+
+  
+
+
+
+
+
+  //  &__grid 
+  //     display: flex 
+  //     flex-wrap: wrap
+  //     justify-content: space-between
+  //     // @include edgesnap 
+  //     //   // grid-template-columns: repeat(auto-fill, minmax(400px,1fr))
+  //     //   grid-template-columns: repeat(auto-fill, minmax(min-content, max-content))
+  //     // @include navsnap 
+  //     //   // grid-template-columns: repeat(auto-fill, minmax(100%,1fr))
+  //     //   grid-template-columns: repeat(auto-fill, minmax(min-content, max-content))
+  //     p 
+  //       font-size: 1em
+  //       margin-top: 1em
+  //     &__item
+  //       flex-direction: column 
+  //       align-items: center 
+  //       justify-content: center 
+  //       overflow: hidden
+  //       margin-top: 1.5em
+  //       // height: 100%
+  //       // width: 100%
+  //       @include navsnap 
+  //         width: 100%
+  //       img
+  //         filter: grayscale(100%)
+  //       &__full
+  //         width: 100%
+  //       &__half
+  //         width: 50%
+  //       &.stu
+  //         width: 33%
+  //         // grid-column-start: 1
+  //         // grid-column-end: 2
+  //         // grid-area: span 4 / span 4
