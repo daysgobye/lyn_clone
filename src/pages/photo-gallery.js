@@ -18,11 +18,11 @@ class photoGallery extends Component {
 
   imgClasses(title) {
     if (title === "full width") {
-      return "photogallery__container__grid__item__full"
+      return "photogallery__container__grid__item__full";
     } else if (title === " half width") {
-      return "photogallery__container__grid__item__half"
+      return "photogallery__container__grid__item__half";
     } else {
-      return "stu"
+      return "stu";
     }
   }
 
@@ -39,9 +39,9 @@ class photoGallery extends Component {
                 <div className="photogallery__container__grid">
                   {data.contentfulPhotoGallery.mainImageGallery.map(img => (
                     <div
-                      className={`photogallery__container__grid__item ${
-                        this.imgClasses(img.widths)
-                        }`}
+                      className={`photogallery__container__grid__item ${this.imgClasses(
+                        img.widths
+                      )}`}
                     >
                       <Img fluid={img.image.fluid} />
                       <p>{img.image.description}</p>
