@@ -10,23 +10,14 @@
     &__grid 
       display: grid 
       grid-gap: 20px
-      // grid-template-columns: repeat(auto-fill, minmax(500px,1fr)) 
-      // grid-template-rows: repeat(2, 1fr)
-      grid-template-columns: repeat(auto-fill, minmax(min-content, max-content))
-      // grid-template-columns: 1fr 1fr
-      // grid-auto-rows: 46px
+      grid-template-columns: repeat(6, 1fr)
       grid-auto-rows: auto
       grid-auto-flow: dense
       // min-height: 35vw
       align-items: start
       // height: auto
       width: 100%
-      @include edgesnap 
-        // grid-template-columns: repeat(auto-fill, minmax(400px,1fr))
-        // grid-template-columns: repeat(auto-fill, minmax(min-content, max-content))
-        grid-template-columns: repeat(6, 1fr)
       @include navsnap 
-        // grid-template-columns: repeat(auto-fill, minmax(100%,1fr))
         grid-template-columns: repeat(auto-fill, minmax(min-content, max-content))
       p 
         font-size: 1em
@@ -45,35 +36,17 @@
         img
           filter: grayscale(100%)
         &__full
-          // width: 100%
-          // grid-column: 6 / span 6
-          // grid-column-start: 1
-          // grid-column-end: 6
           grid-area: span 6 / span 6
-          // display: none 
-        &.half
-          // width: 100%
-          // grid-column-start: 1
-          // grid-column-end: 3
+        &__half
           grid-area: span 3 / span 3
           @include navsnap 
             grid-area: span 6 / span 6
         &.stu
-          // width: 3%
-          // grid-column-start: 1
-          // grid-column-end: 2
           grid-area: span 2 / span 2
+          @media(max-width: 850px)
+            grid-area: span 3 / span 3
           @include navsnap 
             grid-area: span 6 / span 6
-        
-
-
-
-
-
-  
-
-
 
 
 
